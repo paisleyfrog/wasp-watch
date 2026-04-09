@@ -128,14 +128,16 @@ export default function WaspDoorbell() {
           position: "relative",
           overflow: "hidden",
         }}>
-          {/* Replace the src below with your actual webcam stream URL */}<iframe width="560" height="315" src="https://www.youtube.com/embed/wCbbLlFWy1o?si=lIgOQLxWuT9Pya3i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          {/* Replace the src below with your actual webcam stream URL */}
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/wCbbLlFWy1o?si=lIgOQLxWuT9Pya3i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen/>
         
-        
+          
+            </div>
+          </div>
 
           {/* Placeholder overlay — remove once stream is wired up */}
        
-            </div>
-          </div>
+            
 
           {/* Ping animations */}
           {recentPings.map((p) => (
@@ -153,10 +155,11 @@ export default function WaspDoorbell() {
               }} />
             </div>
           ))}
-        </div>
-      </div>
+        
+        
 
-      {/* Counter + Button */}
+           {/* Counter + Button */}
+     
       <div style={{
         width: "100%", maxWidth: 720, zIndex: 1,
         display: "flex", alignItems: "stretch", gap: 0,
@@ -234,13 +237,13 @@ export default function WaspDoorbell() {
       </div>
 
       {/* Footer */}
-      <div style={{
+  <div style={{
         marginTop: 32, fontSize: 10, opacity: 0.35, letterSpacing: 2,
         textTransform: "uppercase", zIndex: 1,
       }}>
         Wasp Watch · Citizen Science · Live 24/7
       </div>
-
+ 
       <style>{`
         @keyframes pulse {
           0%, 100% { opacity: 1; transform: scale(1); }
