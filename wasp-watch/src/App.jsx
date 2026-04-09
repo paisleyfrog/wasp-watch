@@ -130,7 +130,7 @@ export default function WaspDoorbell() {
         }}>
           {/* Replace the src below with your actual webcam stream URL */}
           <iframe
-            src="about:blank"
+            src="https://youtu.be/wCbbLlFWy1o"
             title="Wasp Watch Live Stream"
             style={{ width: "100%", height: "100%", border: "none", display: "block" }}
             allowFullScreen
