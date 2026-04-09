@@ -27,7 +27,7 @@ export default function WaspDoorbell() {
       try {
         const result = await window.storage.get(STORAGE_KEY, true);
         if (result) setCount(parseInt(result.value) || 0);
-      } catch (e) {}
+      } catch (e) { }
     }, 3000);
 
     return () => clearInterval(interval);
@@ -55,7 +55,7 @@ export default function WaspDoorbell() {
 
     try {
       await window.storage.set(STORAGE_KEY, String(newCount), true);
-    } catch (e) {}
+    } catch (e) { }
   };
 
   return (
@@ -128,27 +128,12 @@ export default function WaspDoorbell() {
           position: "relative",
           overflow: "hidden",
         }}>
-          {/* Replace the src below with your actual webcam stream URL */}
-          <iframe
-            src="https://youtu.be/wCbbLlFWy1o"
-            title="Wasp Watch Live Stream"
-            style={{ width: "100%", height: "100%", border: "none", display: "block" }}
-            allowFullScreen
-          />
+          {/* Replace the src below with your actual webcam stream URL */}<iframe width="560" height="315" src="https://www.youtube.com/embed/wCbbLlFWy1o?si=lIgOQLxWuT9Pya3i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+        
 
           {/* Placeholder overlay — remove once stream is wired up */}
-          <div style={{
-            position: "absolute", inset: 0,
-            display: "flex", flexDirection: "column",
-            alignItems: "center", justifyContent: "center",
-            color: "#f5f0e8", gap: 12, background: "#1a1209",
-          }}>
-            <div style={{ fontSize: 40 }}>📷</div>
-            <div style={{ fontSize: 12, letterSpacing: 2, opacity: 0.5, textAlign: "center", maxWidth: 260 }}>
-              STREAM PLACEHOLDER<br />
-              <span style={{ opacity: 0.6, fontSize: 10 }}>
-                Replace the iframe src with your webcam stream URL
-              </span>
+       
             </div>
           </div>
 
