@@ -129,7 +129,7 @@ export default function WaspDoorbell() {
           overflow: "hidden",
         }}>
           {/* Replace the src below with your actual webcam stream URL */}
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/wCbbLlFWy1o?si=lIgOQLxWuT9Pya3i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen/>
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/By1xV0cQWX0?si=mER4KeFCNM2hLo7h&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         
           
             </div>
