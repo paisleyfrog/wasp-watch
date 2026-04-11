@@ -210,8 +210,7 @@ export default function WaspDoorbell() {
             </div>
           ))}
         </div>
-      </div>
-
+      
       {/* Counter + 3D Button */}
       <div style={{
         width: "100%", maxWidth: 720, zIndex: 1,
