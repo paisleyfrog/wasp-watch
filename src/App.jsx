@@ -180,17 +180,9 @@ export default function WaspDoorbell() {
           background: "#1a1209", border: "2px solid #2a1f0e",
           position: "relative", overflow: "hidden",
         }}>
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/3J4q3yPx6Kg?si=PXwH8xLlTSoQqj6d"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-            style={{ display: "block", border: "none" }}
-          />
+          <iframe id="ytplayer" type="text/html" width="720" height="405"
+src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&controls=0&color=white"
+frameborder="0" allowfullscreen>
 
           {/* Ping animations */}
           {recentPings.map((p) => (
