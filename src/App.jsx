@@ -175,13 +175,24 @@ export default function WaspDoorbell() {
           <span style={{ fontSize: 11, opacity: 0.45 }}>Backyard — Window cam</span>
         </div>
 
-        <div style={{
-          width: "100%", aspectRatio: "16/9",
-          background: "#1a1209", border: "2px solid #2a1f0e",
-          position: "relative", overflow: "hidden",
-        }}>
-         <iframe width="560" height="315" src="https://www.youtube.com/embed/_qeVtOgvewk?si=T6LeCw6mpAgYb2mW"title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+       <div style={{
+  width: "100%",
+  aspectRatio: "16/9",
+  background: "#1a1209",
+  border: "2px solid #2a1f0e",
+  position: "relative",
+  overflow: "hidden",
+}}>
+  <iframe
+    style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+    src="https://www.youtube.com/embed/_qeVtOgvewk?si=T6LeCw6mpAgYb2mW"
+    title="YouTube video player"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+  />
+</div>
           {/* Ping animations */}
           {recentPings.map((p) => (
             <div key={p.id} style={{
