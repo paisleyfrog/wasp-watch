@@ -385,12 +385,14 @@ export default function WaspDoorbell() {
         }}>
           <iframe
             width="100%" height="100%"
-            src="https://www.youtube.com/embed/3J4q3yPx6Kg?si=PXwH8xLlTSoQqj6d"
+            src="https://www.youtube.com/embed/zT7jCvmpFX0?si=-DbZRxH5Vt7s9jEi&amp;controls=0"
             title="YouTube video player" frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin" allowFullScreen
             style={{ display: "block", border: "none" }}
           />
+
+
           {recentPings.map((p) => (
             <div key={p.id} style={{
               position: "absolute", left: `${p.x}%`, top: `${p.y}%`,
