@@ -37,7 +37,7 @@ function makeSightingCanvas(ts) {
   canvas.height = 360;
   const ctx = canvas.getContext("2d");
   // Dark background
-  ctx.fillStyle = "#1a1209";
+  ctx.fillStyle = "#162f42";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   // Subtle grid
   ctx.strokeStyle = "rgba(245,197,24,0.07)";
@@ -65,7 +65,7 @@ function makeSightingCanvas(ts) {
   ctx.font = "bold 24px Courier New";
   ctx.fillText("⚠  WASP SPOTTED!", canvas.width / 2, canvas.height / 2 + 40);
   // Timestamp
-  ctx.fillStyle = "#f5f0e8";
+  ctx.fillStyle = "#dfd4b3";
   ctx.font = "13px Courier New";
   ctx.fillText(new Date(ts).toLocaleString(), canvas.width / 2, canvas.height / 2 + 68);
   // Watermark
@@ -95,8 +95,8 @@ function GalleryPage({ onBack }) {
 
   return (
     <div style={{
-      minHeight: "100vh", background: "#f5f0e8",
-      fontFamily: "'Courier New', Courier, monospace", color: "#2a1f0e",
+      minHeight: "100vh", background: "#dfd4b3",
+      fontFamily: "'Courier New', Courier, monospace", color: "#1f4b6b",
       padding: "0 16px 60px",
     }}>
       {/* Grain */}
@@ -110,21 +110,21 @@ function GalleryPage({ onBack }) {
         {/* Header */}
         <header style={{
           paddingTop: 24, paddingBottom: 12,
-          borderBottom: "2px solid #2a1f0e", marginBottom: 28,
+          borderBottom: "2px solid #1f4b6b", marginBottom: 28,
           display: "flex", justifyContent: "space-between", alignItems: "center",
         }}>
           <div>
             <div style={{ fontSize: 10, letterSpacing: 4, textTransform: "uppercase", opacity: 0.4, marginBottom: 4 }}>
               Wasp Watch
             </div>
-            <h1 style={{ margin: 0, fontSize: "clamp(22px, 5vw, 36px)", fontWeight: 700, letterSpacing: -1, color: "#2a1f0e" }}>
+            <h1 style={{ margin: 0, fontSize: "clamp(22px, 5vw, 36px)", fontWeight: 700, letterSpacing: -1, color: "#1f4b6b", fontWeight: 700 }}>
               📸 Sightings Gallery
             </h1>
           </div>
           <button onClick={onBack} style={{
             fontFamily: "inherit", fontWeight: 700, fontSize: 11,
             letterSpacing: 2, textTransform: "uppercase",
-            background: "#2a1f0e", color: "#f5c518",
+            background: "#1f4b6b", color: "#f5c518",
             border: "none", padding: "10px 16px", cursor: "pointer",
           }}>
             ← Back to Live
@@ -159,11 +159,11 @@ function GalleryPage({ onBack }) {
                   key={s.ts}
                   onClick={() => setLightbox(s)}
                   style={{
-                    cursor: "pointer", border: "2px solid #2a1f0e",
-                    background: "#2a1f0e", overflow: "hidden",
+                    cursor: "pointer", border: "2px solid #1f4b6b",
+                    background: "#1f4b6b", overflow: "hidden",
                     transition: "transform 0.15s, box-shadow 0.15s",
                   }}
-                  onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "0 8px 24px rgba(42,31,14,0.3)"; }}
+                  onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "0 8px 24px rgba(31,75,107,0.3)"; }}
                   onMouseLeave={e => { e.currentTarget.style.transform = ""; e.currentTarget.style.boxShadow = ""; }}
                 >
                   <img src={s.img} alt={`Sighting ${i + 1}`} style={{ width: "100%", display: "block" }} />
@@ -325,8 +325,8 @@ export default function WaspDoorbell() {
 
   return (
     <div style={{
-      minHeight: "100vh", background: "#f5f0e8",
-      fontFamily: "'Courier New', Courier, monospace", color: "#2a1f0e",
+      minHeight: "100vh", background: "#dfd4b3",
+      fontFamily: "'Courier New', Courier, monospace", color: "#1f4b6b",
       display: "flex", flexDirection: "column", alignItems: "center",
       padding: "0 16px 40px", position: "relative", overflow: "hidden",
     }}>
@@ -342,7 +342,7 @@ export default function WaspDoorbell() {
       {toast !== null && (
         <div style={{
           position: "fixed", top: 24, left: "50%", transform: "translateX(-50%)",
-          zIndex: 100, background: "#2a1f0e", color: "#f5c518",
+          zIndex: 100, background: "#1f4b6b", color: "#f5c518",
           padding: "16px 32px", border: "2px solid #f5c518", fontWeight: 700,
           fontSize: "clamp(13px, 3vw, 18px)", letterSpacing: 1, textAlign: "center",
           animation: "toastIn 0.3s ease-out", boxShadow: "0 8px 32px rgba(0,0,0,0.35)",
@@ -355,11 +355,11 @@ export default function WaspDoorbell() {
       {/* Header */}
       <header style={{
         width: "100%", maxWidth: 720, paddingTop: 24, paddingBottom: 12,
-        borderBottom: "2px solid #2a1f0e", marginBottom: 28, zIndex: 1,
+        borderBottom: "2px solid #1f4b6b", marginBottom: 28, zIndex: 1,
         display: "flex", justifyContent: "space-between", alignItems: "center",
       }}>
         <img src="/logo.png" alt="Wasp Watch Logo" style={{ height: 90, width: "auto", objectFit: "contain" }} />
-        <div style={{ textAlign: "right", fontSize: 11, opacity: 0.45, lineHeight: 1.6, color: "#2a1f0e" }}>
+        <div style={{ textAlign: "right", fontSize: 11, opacity: 0.7, lineHeight: 1.6, color: "#1f4b6b", fontWeight: 700 }}>
           CITIZEN<br />SCIENCE<br />PROJECT
         </div>
       </header>
@@ -375,15 +375,15 @@ export default function WaspDoorbell() {
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#fff", display: "inline-block", animation: "pulse 1.2s ease-in-out infinite" }} />
             LIVE
           </span>
-          <span style={{ fontSize: 11, opacity: 0.45 }}>Office Window Cam</span>
+          <span style={{ fontSize: 11, opacity: 0.75, color: "#1f4b6b", fontWeight: 600 }}>Office Window Cam</span>
         </div>
 
         <div style={{
           width: "100%", aspectRatio: "16/9", position: "relative", borderRadius: 4, overflow: "hidden",
-          boxShadow: "0 20px 60px rgba(42,31,14,0.35), 0 8px 24px rgba(42,31,14,0.2), 0 2px 6px rgba(42,31,14,0.15)",
-          transform: "translateY(-2px)", border: "3px solid #2a1f0e", background: "#1a1209",
+          boxShadow: "0 20px 60px rgba(31,75,107,0.35), 0 8px 24px rgba(31,75,107,0.2), 0 2px 6px rgba(31,75,107,0.15)",
+          transform: "translateY(-2px)", border: "3px solid #1f4b6b", background: "#162f42",
         }}>
-          <iframe
+        <iframe
             width="100%" height="100%"
             src="https://www.youtube.com/embed/zT7jCvmpFX0?si=-DbZRxH5Vt7s9jEi&amp;controls=0"
             title="YouTube video player" frameBorder="0"
@@ -391,8 +391,6 @@ export default function WaspDoorbell() {
             referrerPolicy="strict-origin-when-cross-origin" allowFullScreen
             style={{ display: "block", border: "none" }}
           />
-
-
           {recentPings.map((p) => (
             <div key={p.id} style={{
               position: "absolute", left: `${p.x}%`, top: `${p.y}%`,
@@ -408,15 +406,15 @@ export default function WaspDoorbell() {
       {/* Counter + Panic Button */}
       <div style={{
         width: "100%", maxWidth: 720, zIndex: 1,
-        display: "flex", alignItems: "stretch", marginTop: 28, border: "2px solid #2a1f0e",
+        display: "flex", alignItems: "stretch", marginTop: 28, border: "2px solid #1f4b6b",
       }}>
         {/* Counter */}
         <div style={{
-          flex: 1, background: "#2a1f0e", color: "#f5f0e8",
+          flex: 1, background: "#1f4b6b", color: "#ffffff",
           display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
           padding: "20px 24px",
         }}>
-          <div style={{ fontSize: 11, letterSpacing: 3, textTransform: "uppercase", opacity: 0.5, marginBottom: 6 }}>Wasps spotted</div>
+          <div style={{ fontSize: 11, letterSpacing: 3, textTransform: "uppercase", opacity: 0.75, marginBottom: 6 }}>Wasps spotted</div>
           <div style={{
             fontSize: "clamp(48px, 10vw, 80px)", fontWeight: 700, lineHeight: 1, letterSpacing: -2,
             transition: "transform 0.15s", transform: justClicked ? "scale(1.12)" : "scale(1)", color: "#f5c518",
@@ -429,10 +427,10 @@ export default function WaspDoorbell() {
 
         {/* Panic Button */}
         <div style={{
-          flex: 1, borderLeft: "2px solid #2a1f0e",
+          flex: 1, borderLeft: "2px solid #1f4b6b",
           display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
           padding: "20px 16px", gap: 12,
-          background: "repeating-linear-gradient(45deg, #1a1209 0px, #1a1209 18px, #f5c518 18px, #f5c518 36px)",
+          background: "repeating-linear-gradient(45deg, #162f42 0px, #162f42 18px, #f5c518 18px, #f5c518 36px)",
         }}>
           <button onClick={handleSpotted} disabled={justClicked} style={{
             background: "none", border: "none", padding: 0,
@@ -465,7 +463,7 @@ export default function WaspDoorbell() {
             <span style={{
               fontFamily: "'Courier New', monospace", fontWeight: 900,
               fontSize: "clamp(10px, 1.8vw, 14px)", letterSpacing: 2, textTransform: "uppercase",
-              color: justClicked ? "#ff4444" : "#f5f0e8", textShadow: "0 1px 3px rgba(0,0,0,0.8)", transition: "color 0.15s",
+              color: justClicked ? "#ff4444" : "#ffffff", textShadow: "0 2px 4px rgba(0,0,0,0.8), 0 1px 2px rgba(0,0,0,0.9)", transition: "color 0.15s",
             }}>
               {justClicked ? "ALARM RAISED!" : "RING THE ALARM"}
             </span>
@@ -476,7 +474,7 @@ export default function WaspDoorbell() {
       {/* Recent Sightings Strip */}
       <div style={{ width: "100%", maxWidth: 720, zIndex: 1, marginTop: 16 }}>
         <div style={{
-          background: "#2a1f0e", border: "2px solid #2a1f0e",
+          background: "#1f4b6b", border: "2px solid #1f4b6b",
           padding: "12px 16px 0",
         }}>
           <div style={{
@@ -496,7 +494,7 @@ export default function WaspDoorbell() {
           </div>
 
           {recentSightings.length === 0 ? (
-            <div style={{ fontSize: 10, color: "#f5f0e8", opacity: 0.3, letterSpacing: 2, textAlign: "center", paddingBottom: 16 }}>
+            <div style={{ fontSize: 10, color: "#ffffff", opacity: 0.3, letterSpacing: 2, textAlign: "center", paddingBottom: 16 }}>
               NO SIGHTINGS YET — RING THE ALARM TO ADD ONE!
             </div>
           ) : (
@@ -538,14 +536,14 @@ export default function WaspDoorbell() {
         marginTop: 16, display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12,
       }}>
         {[{ n: "1", t: "Watch the stream" }, { n: "2", t: "Spot a wasp?" }, { n: "3", t: "Ring the alarm!" }].map(({ n, t }) => (
-          <div key={n} style={{ border: "2px solid #2a1f0e", background: "#2a1f0e", padding: "14px 14px", display: "flex", alignItems: "center", gap: 10 }}>
-            <span style={{ width: 26, height: 26, background: "#f5c518", color: "#2a1f0e", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 900, flexShrink: 0 }}>{n}</span>
-            <span style={{ fontSize: 13, lineHeight: 1.3, fontWeight: 700, color: "#f5f0e8", letterSpacing: 1 }}>{t}</span>
+          <div key={n} style={{ border: "2px solid #1f4b6b", background: "#1f4b6b", padding: "14px 14px", display: "flex", alignItems: "center", gap: 10 }}>
+            <span style={{ width: 26, height: 26, background: "#f5c518", color: "#1f4b6b", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 900, flexShrink: 0 }}>{n}</span>
+            <span style={{ fontSize: 13, lineHeight: 1.3, fontWeight: 700, color: "#ffffff", letterSpacing: 1 }}>{t}</span>
           </div>
         ))}
       </div>
 
-      <div style={{ marginTop: 32, fontSize: 10, opacity: 0.35, letterSpacing: 2, textTransform: "uppercase", zIndex: 1 }}>
+      <div style={{ marginTop: 32, fontSize: 10, opacity: 0.6, letterSpacing: 2, textTransform: "uppercase", zIndex: 1 }}>
         Wasp Watch · Citizen Science · Live 24/7
       </div>
 
