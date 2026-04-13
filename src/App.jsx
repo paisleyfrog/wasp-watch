@@ -385,7 +385,7 @@ export default function WaspDoorbell() {
         }}>
         <iframe
             width="100%" height="100%"
-            src="https://www.youtube.com/embed/zT7jCvmpFX0?si=-DbZRxH5Vt7s9jEi&amp;controls=0"
+            src="https://www.youtube.com/embed/wPysJ_MRbUA?si=OOim80booAo_BBAi"
             title="YouTube video player" frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin" allowFullScreen
